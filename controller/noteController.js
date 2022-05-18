@@ -1,5 +1,6 @@
 const generator = require("../Util/generator");
 const memStrg = require("../Util/memory.storage");
+const model = require("../model/node.model");
 
 
 exports.getAllNotes = (req,res)=>{
@@ -9,7 +10,8 @@ exports.getAllNotes = (req,res)=>{
     let value_2 = memStrg.store.setItem(new_2,'item_2');
     let keys = memStrg.getKeys(memStrg.store);
     let values = memStrg.getValues(memStrg.store);
-res.send("all values ........"+JSON.stringify(keys));
+    let noteObj = new model.Note('001','pero','pero is very tired','omar',new Date())
+res.send("all values ........"+JSON.stringify(noteObj));
 console.log(JSON.stringify(values));
 }
 
