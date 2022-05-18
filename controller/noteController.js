@@ -1,5 +1,9 @@
+const generator = require("../Util/generator");
+
+
 exports.getAllNotes = (req,res)=>{
-res.send("Get All Notes From Controller");
+    let new_1 = generator.generate();
+res.send("Get All Notes From Controller"+new_1);
 }
 
 exports.saveNote = (req,res)=>{

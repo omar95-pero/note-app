@@ -1,0 +1,11 @@
+var sequential = require("sequential-ids");
+ 
+var generator = new sequential.Generator({
+  digits: 6, letters: 3,
+  restore: "AAB - 000"
+});
+ 
+
+generator.start();
+
+module.exports = generator;
