@@ -5,6 +5,8 @@ const noteCtrl = require('../controller/noteController');
 
 const router = express.Router();
 router.get("/notes",noteCtrl.getAllNotes);
-router.get("/save-note",noteCtrl.saveNote);
+router.post("/save-note",noteCtrl.saveNote);
+router.put("/update-note",noteCtrl.updateNote);
+router.delete("/delete/:noteId",noteCtrl.deleteNote);
 
 module.exports = router;
